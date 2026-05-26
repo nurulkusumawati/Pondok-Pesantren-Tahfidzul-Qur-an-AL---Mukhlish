@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pendaftaran Santri | PPTQ Al - Mukhlish</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #f4f4f4;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header{
+            background: #556b2f;
+            padding: 15px 8%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            background: rgba(255,255,255,0.12);
+            padding: 10px 18px;
+            border-radius: 18px;
+        }
+
+        .logo img{
+            width: 120px;
+            height: 65px;
+            object-fit: contain;
+
+            border-radius: 10px;
+            background: white;
+            padding: 5px;
+        }
+
+        .logo h1{
+            color: white;
+            font-size: 24px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 8px 14px;
+            border-radius: 10px;
+        }
+
+        nav ul li a:hover{
+            background: rgba(255,255,255,0.15);
+            color: #ffe082;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero{
+            background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('assets/bckgr.jpeg');
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 100px 8%;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p{
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* ================= FORM ================= */
+
+        .form-section{
+            padding: 70px 8%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container{
+            width: 100%;
+            max-width: 850px;
+
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .form-container h3{
+            text-align: center;
+            color: #556b2f;
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .form-group{
+            margin-bottom: 25px;
+        }
+
+        .form-group label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select{
+            width: 100%;
+            padding: 14px;
+
+            border: 1px solid #ccc;
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus{
+            border-color: #556b2f;
+            outline: none;
+
+            box-shadow: 0 0 8px rgba(85,107,47,0.3);
+        }
+
+        textarea{
+            resize: vertical;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .btn{
+            width: 100%;
+            padding: 15px;
+
+            background: #556b2f;
+            color: white;
+
+            border: none;
+            border-radius: 14px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: #6b8e23;
+            transform: translateY(-2px);
+        }
+
+        /* ================= INFO ================= */
+
+        .info{
+            margin-top: 40px;
+            background: #f5f5dc;
+            padding: 25px;
+            border-radius: 18px;
+        }
+
+        .info h4{
+            color: #556b2f;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .info ul{
+            padding-left: 20px;
+            line-height: 2;
+            color: #444;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer{
+            background: #556b2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:768px){
+
+            .navbar{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2{
+                font-size: 35px;
+            }
+
+            .hero p{
+                font-size: 18px;
+            }
+
+            .form-container{
+                padding: 25px;
+            }
+
+            .form-container h3{
+                font-size: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="assets/logoam.PNG" alt="Logo PPTQ">
+                <h1>PPTQ AL - MUKHLISH</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="kurikulum.html">Jadwal</a></li>
+                    <li><a href="pengajar.html">Pengajar</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h2>Pendaftaran Santri Baru</h2>
+
+        <p>
+            Pondok Pesantren Tahfidzul Qur'an Al - Mukhlish <br>
+            Mencetak Generasi Qur’ani, Berakhlak Mulia dan Berwawasan Teknologi
+        </p>
+
+    </section>
+
+    <!-- ================= FORM ================= -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h3>Formulir Pendaftaran</h3>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label>Tempat, Tanggal Lahir</label>
+                    <input type="text" placeholder="Contoh: Palembang, 10 Januari 2010">
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+
+                    <select>
+                        <option>Pilih Jenis Kelamin</option>
+                        <option>Laki-laki</option>
+                        <option>Perempuan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea rows="4" placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor WhatsApp</label>
+                    <input type="text" placeholder="08xxxxxxxxxx">
+                </div>
+
+                <div class="form-group">
+                    <label>Asal Sekolah</label>
+                    <input type="text" placeholder="Masukkan asal sekolah">
+                </div>
+
+                <div class="form-group">
+                    <label>Pilihan Program</label>
+
+                    <select>
+                        <option>Pilih Program</option>
+                        <option>Tahfidz Qur'an</option>
+                        <option>Madrasah Diniyah</option>
+                        <option>Kitab Kuning</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Orang Tua / Wali</label>
+                    <input type="text" placeholder="Masukkan nama orang tua">
+                </div>
+
+                <button type="submit" class="btn">
+                    Kirim Pendaftaran
+                </button>
+
+            </form>
+
+            <!-- ================= INFO ================= -->
+
+            <div class="info">
+
+                <h4>Syarat Pendaftaran</h4>
+
+                <ul>
+                    <li>Fotokopi Kartu Keluarga</li>
+                    <li>Fotokopi Akta Kelahiran</li>
+                    <li>Pas Foto 3x4 sebanyak 2 lembar</li>
+                    <li>Fotokopi Ijazah / Surat Keterangan Lulus</li>
+                    <li>Mengisi formulir pendaftaran</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Pondok Pesantren Tahfidzul Qur'an Al - Mukhlish
+        </p>
+
+    </footer>
+
+</body>
+</html>
